@@ -22,7 +22,7 @@
 
 ![App](https://github.com/titansys/gateways/blob/master/screenshot.png)
 
-# Pricing Format
+# Pricing
 
 The custom gateway system only supports sending function, you can also specify pricing of each sent sms by country which will be deducted from user credits.
 
