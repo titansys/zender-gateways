@@ -28,7 +28,7 @@ The custom gateway system only supports sending function, you can also specify p
 
 **currency** - The base currency to use for calculating reduction from user credits. User credits will be based from the system currency, so if you use USD here and your system currency is set to GBP then the prices will be converted to GBP first before deducting from user credits.
 **default** - The default price for each sms, if the country of recipient is not listed in **countries** array then default price will be used for credit deduction.
-**countries** - The array of countries with unique pricing, if you want to charge more for sending to specific country, you can do it here. Please note that country codes must be in **ISO Alpha-2** format. Prices can supports float values ie..,, 0.002, 0.01 and so on.
+**countries** - The array of countries with unique pricing, if you want to charge more for sending to specific country, you can do it here. Please note that country codes must be in **ISO Alpha-2** format. Prices supports float values ie..,, 0.002, 0.01 and so on.
 
 Please strictly follow this format:
 ```yaml
