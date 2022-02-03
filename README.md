@@ -31,7 +31,8 @@ The custom gateway system only supports sending function, you can also specify p
 **countries** - The array of countries with unique pricing, if you want to charge more for sending to specific country, you can do it here. Please note that country codes must be in **ISO Alpha-2** format. Prices can supports float values ie..,, 0.002, 0.01 and so on.
 
 Please strictly follow this format:
-`{
+```yaml
+{
   "currency": "USD",
   "default": "0.01",
   "countries": {
@@ -39,7 +40,8 @@ Please strictly follow this format:
     "ph": "0.1",
     "gb": "0.02"
   }
-}`
+}
+```
 
 # Gateway Request
 
