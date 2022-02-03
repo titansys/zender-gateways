@@ -38,3 +38,7 @@ Please strictly follow this format:
     "gb": "0.02"
   }
 }`
+
+# Gateway Request
+
+If you want to integrate a custom sms gateway, you can easily do that by using the **sample.php** file in this repository, this requires basic PHP knowledge. Alternatively, we might also integrate it for you, please post to our support site.
