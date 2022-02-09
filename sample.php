@@ -4,10 +4,20 @@
  * @author Your Name
  */
 
-function gatewaySend($phone, $message, &$system){
+function gatewaySend($phone, $message, &$system)
+{
 	/**
 	 * Implement sending here
-	 * @return true:Success
-	 * @return false:Failed
+	 * @return bool:true
+	 * @return bool:false
+	 */
+}
+
+function gatewayCallback($request, &$system)
+{
+	/**
+	 * Implement status callback here if gateway supports it
+	 * @return array:MessageID
+	 * @return array:Empty
 	 */
 }

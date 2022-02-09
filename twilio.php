@@ -4,11 +4,12 @@
  * @author Titan Systems
  */
 
-function gatewaySend($phone, $message, &$system){
+function gatewaySend($phone, $message, &$system)
+{
 	/**
 	 * Implement sending here
-	 * @return true:Success
-	 * @return false:Failed
+	 * @return bool:true
+	 * @return bool:false
 	 */
 
 	$fromPhone = ""; // Twilio number to use 
