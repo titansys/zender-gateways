@@ -47,4 +47,4 @@ Please strictly follow this format:
 
 # Gateway Request
 
-If you want to integrate a custom sms gateway, you can easily do that by using the **sample.php** file in this repository, this requires basic PHP knowledge. Alternatively, we might also integrate it for you, please post to our support site.
+If you want to integrate a custom sms gateway, you can easily do that by using the **boilerplate.php** file in this repository, this requires basic PHP knowledge. Alternatively, we might also integrate it for you, please post to our support site.
