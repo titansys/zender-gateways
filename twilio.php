@@ -15,12 +15,14 @@ function gatewaySend($phone, $message, &$system)
 	$fromPhone = ""; // Twilio number to use 
 	$accountSid = ""; // Your twilio Account SID
 	$authToken = ""; // Your twilio authentication token
+	$callbackId = ""; // Callback ID you got from zender admin panel
 
 	$send = json_decode($system->guzzle->post("https://api.twilio.com/2010-04-01/Accounts/{$accountSid}/Messages.json", [
 		"form_params" => [
         	"From" => $fromPhone,
         	"Body" => $message,
-        	"To" => $phone
+        	"To" => $phone,
+        	"StatusCallback" => site_url("gateway/{$callbackId}", true)
         ],
         "auth" => [
         	$accountSid,
@@ -30,20 +32,22 @@ function gatewaySend($phone, $message, &$system)
         "http_errors" => false
 	])->getBody()->getContents());
 
-	sleep(3);
-
 	if($send->status == "queued"):
-		$verify = json_decode($system->guzzle->get("https://api.twilio.com/{$send->uri}", [
-	        "auth" => [
-	        	$accountSid,
-	        	$authToken
-	        ],
-	        "allow_redirects" => true,
-	        "http_errors" => false
-		])->getBody()->getContents());
+		return $send->sid;
+	else:
+		return false;
+	endif;
+}
 
-		if($verify->status == "delivered"):
-			return true;
+function gatewayCallback($request, &$system)
+{
+	$callbackId = ""; // Callback ID you got from zender admin panel
+
+	$system->cache->container("system.gateways");
+
+	if($system->cache->has("{$callbackId}.{$request["MessageSid"]}")):
+		if($request["MessageStatus"] == "sent"):
+			return $system->cache->get("{$callbackId}.{$request["MessageSid"]}");
 		else:
 			return false;
 		endif;
