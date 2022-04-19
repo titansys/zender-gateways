@@ -20,7 +20,7 @@
 * Configure your pricing table for the gateway, format explanation can be located below
 * Submit and your new external gateway is ready
 
-![App](https://github.com/titansys/gateways/blob/master/screenshot.png)
+![App](https://github.com/titansys/zender-gateways/blob/master/screenshot.png)
 
 # Pricing
 
