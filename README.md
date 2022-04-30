@@ -24,9 +24,7 @@
 
 # Pricing
 
-The custom gateway system only supports sending function, you can also specify pricing of each sent sms by country which will be deducted from user credits.
-
-**currency** - The base currency to use for calculating reduction from user credits. User credits will be based from the system currency, so if you use USD here and your system currency is set to GBP then the prices will be converted to GBP first before deducting from user credits.
+The custom gateway system only supports sending function, you can also specify pricing of each sent sms by country which will be deducted from user credits. It will use the currency you selected in the system settings.
 
 **default** - The default price for each sms, if the country of recipient is not listed in **countries** array then default price will be used for credit deduction.
 
@@ -35,7 +33,6 @@ The custom gateway system only supports sending function, you can also specify p
 Please strictly follow this format:
 ```yaml
 {
-  "currency": "USD",
   "default": "0.01",
   "countries": {
     "us": "0.01",
