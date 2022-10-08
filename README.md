@@ -8,7 +8,8 @@
 
 | Gateway | Status |
 | ------ | ------ |
-| Twilio | Released |
+| [Twilio](https://www.twilio.com/) | Released | Titan Systems |
+| [Ultimate SMS](https://codecanyon.net/item/ultimate-sms-bulk-sms-application-for-marketing/20062631) | Released | Titan Systems |
 
 # Usage
 
