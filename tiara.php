@@ -15,8 +15,8 @@
 
 define("TIARA_GATEWAY", [
 	"siteUrl" => "http://.....address/api/messaging/sendsms", // Meliora test SMS site url, don't add ending slash
-	"apiToken" => "", // Meliora  test SMS client api token. read: https://bit.ly/3dXO2qP
-	"senderId" => "" // The sender ID of the message. read: https://bit.ly/3dXO2qP
+	"apiToken" => "", // Meliora  test SMS client api token.
+	"senderId" => "" // The sender ID of the message.
 ]);
 
 function gatewaySend($phone, $message, &$system)
@@ -41,7 +41,7 @@ function gatewaySend($phone, $message, &$system)
 	])->getBody()->getContents(), true);
 
 	try {
-		return isset($send["status"]) && $send["status"] == "SUCCESS" ? true : false;
+		return isset($send["status"]) && strtolower($send["status"]) == "success" ? true : false;
 	} catch(Exception $e){
 		return false;
 	}
