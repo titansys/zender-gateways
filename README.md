@@ -6,8 +6,8 @@
 
 # Available Controllers
 
-| Gateway | Status |
-| ------ | ------ |
+| Gateway | Status | Author |
+| ------ | ------ | ------ |
 | [Twilio](https://www.twilio.com/) | Released | Titan Systems |
 | [Tiara](https://meliora.co.ke/product/tiara) | Released | [Martin Bhuong](https://github.com/compgeniuses) |
 | [Ultimate SMS](https://codecanyon.net/item/ultimate-sms-bulk-sms-application-for-marketing/20062631) | Released | Titan Systems |
