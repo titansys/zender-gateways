@@ -1,16 +1,20 @@
 <?php
 /**
- * Tiara SMS Platform  // Tiara is an sms gateway Platform used by many sms providers, its a robust sms gateway systsem for handling complex sms routing
- https://meliora.co.ke/product/tiara
+ * Tiara SMS Platform 
+ * @url https://meliora.co.ke/product/tiara
  * @author MELIORA TECHNOLOGIES
  */
 
 /**
-* What is Tiara?
-* Tiara SMS Gateway is a fast, simple, and secure enterprise SMS Gateway that simplifies how enterprises communicate to their customers via SMS.
-* It supports various messaging protocols and simplifies SMS integrations. 
-* Multiple applications can connect to the gateway and the gateway can reliably route SMS traffic to multiple mobile network operators.
- 
+ * What is Tiara?
+ * 
+ * Tiara SMS Gateway is a fast, simple, and secure enterprise SMS Gateway 
+ * that simplifies how enterprises communicate to their customers via SMS.
+ * 
+ * It supports various messaging protocols and simplifies SMS integrations. 
+ * 
+ * Multiple applications can connect to the gateway and the gateway can 
+ * reliably route SMS traffic to multiple mobile network operators.
  */
 
 define("TIARA_GATEWAY", [
