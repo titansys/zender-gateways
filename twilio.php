@@ -33,7 +33,7 @@ function gatewaySend($phone, $message, &$system)
 	])->getBody()->getContents());
 
 	if($send->status == "accepted"):
-		return $send->sid;
+		return true;
 	else:
 		return false;
 	endif;
