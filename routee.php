@@ -1,7 +1,7 @@
 <?php
 /**
  * Routee SMS Gateway
- * @url https://www.routee.net/
+ * @url https://www.routee.net
  * @author shubra2641 <https://github.com/shubra2641>
  */
 
