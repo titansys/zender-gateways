@@ -10,27 +10,36 @@ define("ROUTEE_GATEWAY", [
 	"fromId" => "Zender" // The sender ID you want to use
 ]);
 
-function gatewaySend($phone, $message, &$system)
-{
-	/**
-	 * Implement sending here
-	 * @return bool:true
-	 * @return bool:false
-	 */
+return [
+    "send" => function ($phone, $message, &$system) {
+        /**
+         * Implement sending here
+         * @return bool:true
+         * @return bool:false
+         */
 
-	$send = $system->guzzle->post("https://connect.routee.net/sms", [
-		"headers" => [
-			"Authorization" => "Bearer " . ROUTEE_GATEWAY["authorization"],
-			"Content-Type" => "application/json"
-		],
-		"json" => [
-        	"body" => $message,
-        	"to" => $phone,
-        	"from" => ROUTEE_GATEWAY["fromId"]
-        ],
-        "allow_redirects" => true,
-        "http_errors" => false
-	]);
+		 $send = $system->guzzle->post("https://connect.routee.net/sms", [
+			"headers" => [
+				"Authorization" => "Bearer " . ROUTEE_GATEWAY["authorization"],
+				"Content-Type" => "application/json"
+			],
+			"json" => [
+				"body" => $message,
+				"to" => $phone,
+				"from" => ROUTEE_GATEWAY["fromId"]
+			],
+			"allow_redirects" => true,
+			"http_errors" => false
+		]);
+	
+		return $send->getStatusCode() == 200 ? true : false;
+    },
+    "callback" => function ($request, &$system) {
+        /**
+         * Implement status callback here if gateway supports it
+         * @return array:MessageID
+         * @return array:Empty
+         */
 
-	return $send->getStatusCode() == 200 ? true : false;
-}
+    }
+];
