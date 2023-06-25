@@ -15,6 +15,7 @@
 | [EasySendSMS](https://www.easysendsms.com) | Released | Titan Systems |
 | [Routee](https://www.routee.net) | Released | [shubra2641](https://github.com/shubra2641) |
 | [Tiara](https://meliora.co.ke/product/tiara) | Released | [Martin Bhuong](https://github.com/compgeniuses) |
+| [ClickSend](https://www.clicksend.com) | Released | [ReantoAscencio](https://github.com/ReantoAscencio) |
 
 # Usage
 
