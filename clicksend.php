@@ -5,7 +5,7 @@
  */
 
 define("CLICKSEND_GATEWAY", [
-	"apiUser" => "", // Clicksend apu User
+	"apiUser" => "", // Clicksend api User
 	"apiKey" => "", // Clicksend api key
     "senderId" => "", // Clicksend sender id
     "source" => "php"
@@ -21,7 +21,7 @@ return [
 
 		$send = $system->guzzle->post("https://rest.clicksend.com/v3/sms/send", [
 			"headers" => [
-				"Authorization" => "Basic " . CLICKSEND_GATEWAY["apiKey"]
+				"Authorization" => "Basic " . base64_encode(CLICKSEND_GATEWAY["apiKey"] . ":" . CLICKSEND_GATEWAY["apiKey"])
 			],
             "json" => [
 				"messages" => [
